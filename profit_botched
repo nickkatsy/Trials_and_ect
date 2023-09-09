@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f_profit(x):
+    if (x < 0):
+        return (0)
+    if (x == 0):
+        return (np.nan)
+    y = np.exp(-2*x)
+    return (4 * x**2 * y)
+
+
+
+
+xmin = -1.0
+xmax = 1.0
+xv = np.linspace(xmin, xmax, 200)
+fx = np.zeros(len(xv),float) # define column vector
+for i in range(len(xv)):
+    fx[i] = f_profit(xv[i])
+
+fig, ax = plt.subplots()
+ax.plot(xv, fx)
+ax.plot(xv, f_profit(1)*np.ones(len(xv)))
+ax.set_xlabel('x')
+ax.set_ylabel('f(x)')
+ax.set_title('Profit Function')
+plt.show()
