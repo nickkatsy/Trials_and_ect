@@ -3,7 +3,7 @@ import random
 def New_Alexandria():
     objectives = []
     
-    # Main objective "Hospital" is always first
+    # Main objective "Hospital" is always first (besides legendary or something)
     objectives.append('Hospital')
     
     # Side objectives grouped by categories
