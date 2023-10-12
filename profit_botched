@@ -15,7 +15,7 @@ xmin = -1.0
 xmax = 1.0
 xv = np.linspace(xmin, xmax, 200)
 
-# Initialize an array to store profit values
+
 fx = np.zeros(len(xv), float)
 
 # Calculate profit values for each x
@@ -32,8 +32,8 @@ ax.set_xlabel('x')
 ax.set_ylabel('f(x)')
 ax.set_title('Profit Function Visualization')
 
-#
+
 ax.legend()
 
-# Display the plot
+
 plt.show()
