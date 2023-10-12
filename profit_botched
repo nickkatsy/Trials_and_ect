@@ -1,28 +1,39 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Profit Function
 def f_profit(x):
-    if (x < 0):
-        return (0)
-    if (x == 0):
-        return (np.nan)
-    y = np.exp(-2*x)
-    return (4 * x**2 * y)
+    if x < 0:
+        return 0
+    if x == 0:
+        return np.nan
+    y = np.exp(-2 * x)
+    return 4 * x**2 * y
 
-
-
-
+# Range
 xmin = -1.0
 xmax = 1.0
 xv = np.linspace(xmin, xmax, 200)
-fx = np.zeros(len(xv),float) # define column vector
+
+# Initialize an array to store profit values
+fx = np.zeros(len(xv), float)
+
+# Calculate profit values for each x
 for i in range(len(xv)):
     fx[i] = f_profit(xv[i])
 
+# Visuals
 fig, ax = plt.subplots()
-ax.plot(xv, fx)
-ax.plot(xv, f_profit(1)*np.ones(len(xv)))
+ax.plot(xv, fx, label='Profit Function')
+ax.axhline(y=f_profit(1), color='r', linestyle='--', label='Profit at x=1')
+
+# labels
 ax.set_xlabel('x')
 ax.set_ylabel('f(x)')
-ax.set_title('Profit Function')
+ax.set_title('Profit Function Visualization')
+
+#
+ax.legend()
+
+# Display the plot
 plt.show()
