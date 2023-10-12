@@ -1,7 +1,7 @@
 import random
 from collections import Counter
 
-# Number of times you played this stupid level without reverting
+# Number of times you played this stupid level withot reverting
 num_trials = 10000
 
 # Lists to store results for each trial
