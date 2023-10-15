@@ -55,7 +55,7 @@ print('Sharpe Ratio:', sharpe_ratio)
 # Correlation matrix of equities
 correlation_matrix = returns_equity.corr()
 
-# correlation matrix using a heatmap
+# correlation matrix for equities using a heatmap
 plt.figure(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True)
 plt.title('Correlation Matrix of Equities')
