@@ -3,11 +3,11 @@ from pypfopt import risk_models, EfficientFrontier, expected_returns
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Define the tickers for stocks and treasury bonds
+# tickers from stocks and treasury bonds
 tickers = ['^GSPC', '^IXIC', '^DJI', '^FTSE', '^GDAXI']
 treasury_bonds = ['^TNX', '^TYX', 'IEF', 'AGG', 'BND']
 
-# date range
+#select any date
 start_date = '2020-10-21'
 end_date = '2023-10-10'
 
@@ -43,7 +43,7 @@ weights_equity = ef.min_volatility()
 portfolio_expected_return = ef.portfolio_performance()[0]
 portfolio_volatility = ef.portfolio_performance()[1]
 
-# Calculate Sharpe Ratio
+# Sharpe Ratio
 sharpe_ratio = (portfolio_expected_return - risk_free_rate) / portfolio_volatility
 
 # Results
