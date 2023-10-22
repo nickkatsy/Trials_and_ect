@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 
-# wether the LM curve is sloping up or down depends on the value r0
+# slope of LM curve depends on the sign of r0
 r0 = 1.6
 Y0 = 100
 G0 = 100
