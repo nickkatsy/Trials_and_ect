@@ -14,7 +14,7 @@ r_values = np.linspace(r0 - 0.1, r0 + 0.1, 200)
 
 #Y values for IS and LM curves
 IS_values = (0.4 * Y0 - 0.2 * r_values - r_values**2 + G0 - 8)
-LM_values = (M0 - 0.6 * r_values**2)
+LM_values = (Y0 - 0.6 * r_values**2)
 
 
 plt.figure(figsize=(8, 6))
