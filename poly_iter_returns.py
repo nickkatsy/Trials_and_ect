@@ -23,7 +23,7 @@ df = yf.download(tickers, start=start_date, end=end_date)['Adj Close']
 returns = df.pct_change().dropna()
 
 
-risk_free_rate = 0.43
+risk_free_rate = 0.05
 
 
 expected_returns = returns.mean()
