@@ -28,7 +28,7 @@ class Market:
             print("Firm 2 Price:", firm2.price, "| Firm 2 Profit:", firm2_profit)
             print("Total Demand:", total_demand)
 
-# Example usage
+
 demand = 100
 firm1 = BertrandFirm(price=5, cost=5)
 firm2 = BertrandFirm(price=15, cost=15)
