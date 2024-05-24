@@ -7,13 +7,13 @@ class BertrandFirm:
         self.price = max(0, competitor_price - 3.99)
 
     def get_profit(self, demand):
-        return (self.price - self.cost) * demand
+        return max(0, (self.price - self.cost) * demand)
 
 class Market:
     def __init__(self, demand):
         self.demand = demand
 
-    def simulate_bertrand_competition(self,firm1,firm2):
+    def simulate_bertrand_competition(self, firm1, firm2):
         while True:
             firm1.set_price(firm2.price)
             firm2.set_price(firm1.price)
@@ -27,7 +27,6 @@ class Market:
             print("Firm 1 Price:", firm1.price, "| Firm 1 Profit:", firm1_profit)
             print("Firm 2 Price:", firm2.price, "| Firm 2 Profit:", firm2_profit)
             print("Total Demand:", total_demand)
-
 
 demand = 50
 firm1 = BertrandFirm(price=4, cost=4)
